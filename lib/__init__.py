@@ -1,23 +1,21 @@
-"""
-Skill Security Auditor Library
+"""Skill Security Auditor - Phase 2"""
 
-Provides security scanning capabilities for OpenClaw skills.
-"""
+from .models import Finding, ScanResult, ScanOptions, SeverityLevel
+from .auditor import SecurityAuditor
+from .batch_scanner import BatchScanner
+from .yara_engine import YaraEngine
+from .llm_analyzer import LLMSemanticAnalyzer
+from .severity_classifier import SeverityClassifier
 
-__version__ = "1.1.0"
-
-from lib.cisco_scanner import CiscoSkillScanner, Finding, ScanResult
-from lib.scanner_orchestrator import ScannerOrchestrator, BulkScanResult
-from lib.report_generator import ReportGenerator
-from lib.clawsec_integration import ClawSecIntegration, ThreatIntel
-
+__version__ = "2.0.0"
 __all__ = [
-    "CiscoSkillScanner",
     "Finding",
-    "ScanResult",
-    "ScannerOrchestrator",
-    "BulkScanResult",
-    "ReportGenerator",
-    "ClawSecIntegration",
-    "ThreatIntel",
+    "ScanResult", 
+    "ScanOptions",
+    "SeverityLevel",
+    "SecurityAuditor",
+    "BatchScanner",
+    "YaraEngine",
+    "LLMSemanticAnalyzer",
+    "SeverityClassifier"
 ]
